@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ControlSafetyCase.com | Control Safety Case</title>
+  <meta name="description" content="Independent reference hub for the concept of a Control Safety Case: evidence-backed structured arguments about keeping advanced AI systems under control in a given deployment context." />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="canonical" href="https://www.controlsafetycase.com/" />
+  <link rel="alternate" href="https://www.controlsafetycase.com/" hreflang="en" />
+  <link rel="alternate" href="https://www.controlsafetycase.com/" hreflang="fr" />
+  <link rel="alternate" href="https://www.controlsafetycase.com/" hreflang="x-default" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ControlSafetyCase.com | Control Safety Case" />
+  <meta property="og:description" content="Independent reference hub for the concept of a Control Safety Case: evidence-backed structured arguments about keeping advanced AI systems under control in a given deployment context." />
+  <meta property="og:url" content="https://www.controlsafetycase.com/" />
+  <meta property="og:image" content="https://www.controlsafetycase.com/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preload" as="image" href="/logo-controlsafetycase.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ControlSafetyCase.com",
+    "url": "https://www.controlsafetycase.com/",
+    "inLanguage": ["en","fr"],
+    "description": "Independent reference hub for the concept of a Control Safety Case: evidence-backed structured arguments about keeping advanced AI systems under control in a given deployment context.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.controlsafetycase.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#08111f;
+      --card:#0b1930;
+      --card2:#0a162a;
+      --text:#e8eefc;
+      --muted:#b6c5e7;
+      --muted2:#93a8d4;
+      --line:#1f3560;
+      --accent:#6aa7ff;
+      --accent2:#7dd3fc;
+      --good:#7ce7c1;
+      --warn:#ffd18b;
+      --radius:16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --max: 1040px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(106,167,255,.28), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(125,211,252,.18), transparent 55%),
+                  radial-gradient(900px 700px at 50% 110%, rgba(124,231,193,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{padding:28px 18px 70px}
+    .container{max-width:var(--max);margin:0 auto}
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:14px;flex-wrap:wrap;
+      margin:0 auto 18px;max-width:var(--max);
+    }
+    .badge-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .badge{
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      padding:7px 10px;
+      border-radius:999px;
+      background: rgba(106,167,255,.16);
+      border:1px solid rgba(106,167,255,.22);
+      color:var(--text);
+    }
+    .badge.subtle{
+      background: rgba(147,168,212,.10);
+      border-color: rgba(147,168,212,.18);
+      color:var(--muted);
+    }
+    .lang{
+      display:flex;align-items:center;gap:8px;
+      background: rgba(11,25,48,.55);
+      border: 1px solid rgba(31,53,96,.55);
+      border-radius:999px;
+      padding:6px;
+      box-shadow: var(--shadow);
+    }
+    .lang button{
+      cursor:pointer;
+      border:0;
+      background: transparent;
+      color: var(--muted);
+      padding:8px 12px;
+      border-radius:999px;
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+    .lang button[aria-pressed="true"]{
+      background: rgba(106,167,255,.22);
+      color: var(--text);
+      border:1px solid rgba(106,167,255,.25);
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)) , var(--card);
+      border: 1px solid rgba(31,53,96,.65);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero{
+      padding:26px 22px 22px;
+      text-align:center;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size:34px;
+      letter-spacing:-.02em;
+    }
+    .logo{
+      width:132px;height:132px;
+      border-radius:18px;
+      border:1px solid rgba(31,53,96,.6);
+      background: rgba(10,22,42,.6);
+      display:block;
+      margin:14px auto 12px;
+      object-fit:contain;
+      box-shadow: 0 16px 30px rgba(0,0,0,.35);
+    }
+    .muted{color:var(--muted);max-width:820px;margin: 0 auto 16px;}
+    .muted b{color:var(--text)}
+    .buttons{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:11px 14px;
+      border-radius:12px;
+      font-weight:750;
+      border:1px solid rgba(31,53,96,.75);
+      background: rgba(10,22,42,.55);
+      color: var(--text);
+    }
+    .btn.primary{
+      background: rgba(106,167,255,.18);
+      border-color: rgba(106,167,255,.30);
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .notice{
+      margin:16px auto 0;
+      max-width:920px;
+      padding:12px 14px;
+      border-radius:14px;
+      background: rgba(255,209,139,.10);
+      border: 1px solid rgba(255,209,139,.18);
+      color: var(--muted);
+      text-align:left;
+    }
+    .notice b{color:var(--text)}
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:16px;
+      margin-top:16px;
+    }
+    @media (max-width: 880px){
+      .grid{grid-template-columns:1fr}
+    }
+    .section{
+      padding:18px 18px 16px;
+    }
+    .section h2{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:-.01em;
+    }
+    .section p{margin:10px 0;color:var(--muted)}
+    ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    li{margin:6px 0}
+    .kvs{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+      margin-top:10px;
+    }
+    @media (max-width: 560px){
+      .kvs{grid-template-columns:1fr}
+    }
+    .kv{
+      padding:12px 12px;
+      border-radius:14px;
+      background: rgba(10,22,42,.55);
+      border:1px solid rgba(31,53,96,.55);
+    }
+    .kv .k{font-weight:800;margin-bottom:6px}
+    .kv .v{color:var(--muted)}
+    .links{
+      display:flex;flex-wrap:wrap;gap:10px;margin-top:10px
+    }
+    .pill{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:10px 12px;border-radius:999px;
+      border:1px solid rgba(31,53,96,.65);
+      background: rgba(10,22,42,.45);
+      color:var(--muted);
+    }
+    .pill b{color:var(--text)}
+    .split{
+      display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between
+    }
+    .small{font-size:13px;color:var(--muted2)}
+    .footer{
+      margin-top:18px;
+      padding:16px 18px;
+      color: var(--muted2);
+      font-size: 13px;
+      text-align:center;
+      opacity:.95;
+    }
+    [hidden]{display:none !important;}
+    .ref a{
+      text-decoration: underline;
+      text-decoration-color: rgba(106,167,255,.35);
+      text-underline-offset: 3px;
+    }
+    svg{display:inline-block}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="badge-row">
+        <span class="badge">DOMAIN ASSET</span>
+        <span class="badge subtle">Independent reference</span>
+        <span class="badge subtle">Not affiliated</span>
+      </div>
+      <div class="lang" aria-label="Language selector">
+        <button id="btn-fr" aria-pressed="false">FR</button>
+        <button id="btn-en" aria-pressed="true">EN</button>
+      </div>
+    </div>
+
+    <!-- ============ HERO EN ============ -->
+    <section class="card hero" data-en>
+      <h1>ControlSafetyCase.com</h1>
+      <img class="logo" src="/logo-controlsafetycase.png" alt="ControlSafetyCase.com" loading="eager" />
+      <p class="muted">
+        <b>Descriptive .com domain</b> for the emerging concept of a <b>Control Safety Case</b>:
+        an <b>evidence-backed, structured argument</b> about keeping advanced AI systems under control
+        within a specified <b>deployment context</b> (assumptions, control measures, evaluations, limits, and updates).
+      </p>
+
+      <div class="buttons">
+        <a class="btn primary" href="mailto:contact@controlsafetycase.com?subject=ControlSafetyCase.com%20-%20Offer%20/%20NDA%20request">
+          Submit an offer / Request NDA
+        </a>
+        <a class="btn" href="/concept-note.html">Concept Note</a>
+        <a class="btn" href="#docs-en">Documents</a>
+        <a class="btn" href="https://www.linkedin.com/company/controlsafetycase" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 4h4v16H4V4zm2-2a2 2 0 110 4 2 2 0 010-4zM10 9h4v2.3c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 2.9 5.3 6.6V20h-4v-5.1c0-1.2 0-2.8-1.9-2.8s-2.2 1.3-2.2 2.7V20h-4V9z" fill="currentColor"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="notice">
+        <b>Important notice.</b> This website is an independent informational resource. It is not a certification body,
+        not a regulator, and provides no audit, assurance, or legal advice. No affiliation is claimed with any organization.
+      </div>
+    </section>
+
+    <!-- ============ HERO FR ============ -->
+    <section class="card hero" data-fr hidden>
+      <h1>ControlSafetyCase.com</h1>
+      <img class="logo" src="/logo-controlsafetycase.png" alt="ControlSafetyCase.com" loading="eager" />
+      <p class="muted">
+        <b>Domaine .com descriptif</b> pour le concept émergent de <b>Control Safety Case</b> :
+        une <b>argumentation structurée fondée sur des preuves</b> visant à expliciter comment un système d’IA reste
+        sous contrôle dans un <b>contexte de déploiement</b> donné (hypothèses, mesures de contrôle, évaluations, limites, mises à jour).
+      </p>
+
+      <div class="buttons">
+        <a class="btn primary" href="mailto:contact@controlsafetycase.com?subject=ControlSafetyCase.com%20-%20Offre%20/%20Demande%20de%20NDA">
+          Faire une offre / Demander un NDA
+        </a>
+        <a class="btn" href="/concept-note.html">Concept Note</a>
+        <a class="btn" href="#docs-fr">Documents</a>
+        <a class="btn" href="https://www.linkedin.com/company/controlsafetycase" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 4h4v16H4V4zm2-2a2 2 0 110 4 2 2 0 010-4zM10 9h4v2.3c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 2.9 5.3 6.6V20h-4v-5.1c0-1.2 0-2.8-1.9-2.8s-2.2 1.3-2.2 2.7V20h-4V9z" fill="currentColor"/>
+          </svg>
+          LinkedIn
+        </a>
+      </div>
+
+      <div class="notice">
+        <b>Note importante.</b> Ce site est une ressource informationnelle indépendante. Il n’est ni organisme de certification,
+        ni régulateur, et ne fournit ni audit, ni assurance, ni conseil juridique. Aucune affiliation n’est revendiquée.
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- ============ VALUE / OVERVIEW EN ============ -->
+      <div class="grid" data-en>
+        <section class="card section">
+          <h2>What a Control Safety Case is (category definition)</h2>
+          <p>
+            A Control Safety Case is a structured set of <b>claims</b>, <b>arguments</b>, and <b>evidence</b> intended to support a
+            deployment decision under explicit control measures. It makes the deployment context, assumptions, limits, and update process auditable and reviewable.
+          </p>
+          <ul>
+            <li><b>Deployment context</b>: operational scope, threat model, assumptions, and acceptable risk thresholds.</li>
+            <li><b>Control measures</b>: monitoring, restrictions, human-in-the-loop gates, tooling, procedural controls.</li>
+            <li><b>Control evaluations</b>: evidence about whether measures hold under realistic adversarial pressure.</li>
+            <li><b>Limits and updates</b>: what is out of scope, known uncertainties, incident response, and revision cadence.</li>
+          </ul>
+
+          <div class="kvs">
+            <div class="kv">
+              <div class="k">For frontier labs</div>
+              <div class="v">Reviewable go/no-go artifact tied to control measures and evaluations.</div>
+            </div>
+            <div class="kv">
+              <div class="k">For audit / assurance</div>
+              <div class="v">Claims-arguments-evidence structure that discourages cherry-picking.</div>
+            </div>
+            <div class="kv">
+              <div class="k">For insurers / risk transfer</div>
+              <div class="v">Explicit scope, assumptions, evidence, limits, and update commitments.</div>
+            </div>
+            <div class="kv">
+              <div class="k">For public sector</div>
+              <div class="v">Vendor-neutral reference point, not a standard owner and not a regulator.</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card section">
+          <h2>What this site provides</h2>
+          <ul>
+            <li>High-integrity bibliography (primary sources only).</li>
+            <li>Precise glossary (control measures, control evaluations, monitoring, red teaming, deployment context).</li>
+            <li>A neutral structure outline (claims / arguments / evidence) without any “certification” posture.</li>
+            <li>Cross-links to adjacent categories (AI assurance case, systemic risk, evidence integrity).</li>
+          </ul>
+
+          <div class="links">
+            <a class="pill" href="/concept-note.html"><b>Concept Note</b> (EN/FR)</a>
+            <a class="pill" href="#docs-en"><b>Acquisition Briefs</b> (PDF)</a>
+            <a class="pill" href="#refs-en"><b>Primary sources</b></a>
+          </div>
+
+          <p class="small">
+            This domain is offered as a <b>category-grade asset</b>. The site content is informational and designed to remain legally conservative.
+          </p>
+        </section>
+      </div>
+
+      <!-- ============ VALUE / OVERVIEW FR ============ -->
+      <div class="grid" data-fr hidden>
+        <section class="card section">
+          <h2>Ce qu’est un Control Safety Case (définition de catégorie)</h2>
+          <p>
+            Un Control Safety Case est un ensemble structuré de <b>revendications</b>, <b>arguments</b> et <b>preuves</b> visant à soutenir
+            une décision de déploiement sous mesures de contrôle explicites. Il rend le contexte, les hypothèses, les limites et le cycle de mise à jour révisables.
+          </p>
+          <ul>
+            <li><b>Contexte de déploiement</b> : périmètre, modèle de menace, hypothèses, seuils de risque acceptable.</li>
+            <li><b>Mesures de contrôle</b> : monitoring, restrictions, garde-fous, gates humains, procédures, outillage.</li>
+            <li><b>Évaluations de contrôle</b> : preuves que les mesures tiennent sous pression réaliste et adversariale.</li>
+            <li><b>Limites et mises à jour</b> : hors périmètre, incertitudes, gestion d’incident, cadence de révision.</li>
+          </ul>
+
+          <div class="kvs">
+            <div class="kv">
+              <div class="k">Pour les labs</div>
+              <div class="v">Artefact go/no-go révisable, lié aux mesures et aux évaluations de contrôle.</div>
+            </div>
+            <div class="kv">
+              <div class="k">Pour audit / assurance</div>
+              <div class="v">Structure revendications-arguments-preuves qui limite le cherry-picking.</div>
+            </div>
+            <div class="kv">
+              <div class="k">Pour assureurs</div>
+              <div class="v">Périmètre, hypothèses, preuves, limites et engagements de mise à jour explicites.</div>
+            </div>
+            <div class="kv">
+              <div class="k">Pour secteur public</div>
+              <div class="v">Point de référence neutre, sans posture d’organisme normatif ou régulateur.</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card section">
+          <h2>Ce que propose ce site</h2>
+          <ul>
+            <li>Bibliographie à forte intégrité (sources primaires uniquement).</li>
+            <li>Glossaire précis (control measures, control evaluations, monitoring, red teaming, contexte).</li>
+            <li>Schéma neutre (revendications / arguments / preuves) sans posture de “certification”.</li>
+            <li>Liens sobres vers catégories adjacentes (assurance case, risque systémique, intégrité des preuves).</li>
+          </ul>
+
+          <div class="links">
+            <a class="pill" href="/concept-note.html"><b>Concept Note</b> (EN/FR)</a>
+            <a class="pill" href="#docs-fr"><b>Briefs d’acquisition</b> (PDF)</a>
+            <a class="pill" href="#refs-fr"><b>Sources primaires</b></a>
+          </div>
+
+          <p class="small">
+            Ce domaine est proposé comme <b>actif de catégorie</b>. Le contenu reste informationnel et juridiquement conservateur.
+          </p>
+        </section>
+      </div>
+
+      <!-- ============ DOCUMENTS EN ============ -->
+      <section class="card section" id="docs-en" data-en>
+        <div class="split">
+          <h2>Documents</h2>
+          <span class="small">PDFs stored in this repository</span>
+        </div>
+        <div class="links">
+          <a class="pill" href="/Acquisition%20Brief%20controlsafetycase-EN-202511.pdf" target="_blank" rel="noopener">
+            <b>Acquisition Brief (EN)</b>
+          </a>
+          <a class="pill" href="/Acquisition%20Brief%20controlsafetycase-202511.pdf" target="_blank" rel="noopener">
+            <b>Acquisition Brief (FR)</b>
+          </a>
+          <a class="pill" href="/concept-note.html"><b>Concept Note</b> (EN/FR)</a>
+        </div>
+        <p class="small">
+          Note: these documents describe the domain as a neutral category asset. They do not represent an endorsement, certification, or compliance claim.
+        </p>
+      </section>
+
+      <!-- ============ DOCUMENTS FR ============ -->
+      <section class="card section" id="docs-fr" data-fr hidden>
+        <div class="split">
+          <h2>Documents</h2>
+          <span class="small">PDFs stockés dans ce dépôt</span>
+        </div>
+        <div class="links">
+          <a class="pill" href="/Acquisition%20Brief%20controlsafetycase-EN-202511.pdf" target="_blank" rel="noopener">
+            <b>Brief d’acquisition (EN)</b>
+          </a>
+          <a class="pill" href="/Acquisition%20Brief%20controlsafetycase-202511.pdf" target="_blank" rel="noopener">
+            <b>Brief d’acquisition (FR)</b>
+          </a>
+          <a class="pill" href="/concept-note.html"><b>Concept Note</b> (EN/FR)</a>
+        </div>
+        <p class="small">
+          Note : ces documents décrivent le domaine comme actif neutre de catégorie. Ils ne constituent ni une validation, ni une certification, ni une promesse de conformité.
+        </p>
+      </section>
+
+      <!-- ============ REFERENCES EN ============ -->
+      <section class="card section ref" id="refs-en" data-en>
+        <h2>Primary sources (selection)</h2>
+        <ul>
+          <li><a href="https://www.aisi.gov.uk/research/a-sketch-of-an-ai-control-safety-case" target="_blank" rel="noopener">A sketch of an AI control safety case (AISI)</a></li>
+          <li><a href="https://www.aisi.gov.uk/blog/how-to-evaluate-control-measures-for-ai-agents" target="_blank" rel="noopener">How to evaluate control measures for AI agents? (AISI)</a></li>
+          <li><a href="https://www.aisi.gov.uk/blog/safety-cases-at-aisi" target="_blank" rel="noopener">Safety cases at AISI (AISI)</a></li>
+          <li><a href="https://www.aisi.gov.uk/blog/safety-case-template-for-inability-arguments" target="_blank" rel="noopener">Safety case template for “inability” arguments (AISI)</a></li>
+          <li><a href="https://blog.redwoodresearch.org/p/takeaways-from-sketching-a-control" target="_blank" rel="noopener">Takeaways from sketching a control safety case (Redwood Research)</a></li>
+          <li><a href="https://arxiv.org/abs/2504.05259" target="_blank" rel="noopener">How to evaluate control measures for LLM agents? (arXiv)</a></li>
+        </ul>
+        <p class="small">
+          These links are provided to document public usage of the term and related methods. They do not imply affiliation or endorsement.
+        </p>
+      </section>
+
+      <!-- ============ REFERENCES FR ============ -->
+      <section class="card section ref" id="refs-fr" data-fr hidden>
+        <h2>Sources primaires (sélection)</h2>
+        <ul>
+          <li><a href="https://www.aisi.gov.uk/research/a-sketch-of-an-ai-control-safety-case" target="_blank" rel="noopener">A sketch of an AI control safety case (AISI)</a></li>
+          <li><a href="https://www.aisi.gov.uk/blog/how-to-evaluate-control-measures-for-ai-agents" target="_blank" rel="noopener">How to evaluate control measures for AI agents? (AISI)</a></li>
+          <li><a href="https://www.aisi.gov.uk/blog/safety-cases-at-aisi" target="_blank" rel="noopener">Safety cases at AISI (AISI)</a></li>
+          <li><a href="https://www.aisi.gov.uk/blog/safety-case-template-for-inability-arguments" target="_blank" rel="noopener">Safety case template for “inability” arguments (AISI)</a></li>
+          <li><a href="https://blog.redwoodresearch.org/p/takeaways-from-sketching-a-control" target="_blank" rel="noopener">Takeaways from sketching a control safety case (Redwood Research)</a></li>
+          <li><a href="https://arxiv.org/abs/2504.05259" target="_blank" rel="noopener">How to evaluate control measures for LLM agents? (arXiv)</a></li>
+        </ul>
+        <p class="small">
+          Ces liens servent à documenter l’usage public du terme et des méthodes associées. Ils n’impliquent aucune affiliation ni validation.
+        </p>
+      </section>
+
+      <!-- ============ RELATED ASSETS EN ============ -->
+      <section class="card section" data-en>
+        <h2>Related category assets (optional cross-links)</h2>
+        <p class="small">Included for coherence only (not an “index of services”).</p>
+        <ul>
+          <li><a href="https://www.aiassurancecase.com/" target="_blank" rel="noopener">AIAssuranceCase.com</a> - umbrella concept (assurance / safety case).</li>
+          <li><a href="https://www.aisystemicrisk.com/" target="_blank" rel="noopener">AISystemicRisk.com</a> - “why now” framing (systemic risk).</li>
+          <li><a href="https://www.syntheticaudit.com/" target="_blank" rel="noopener">SyntheticAudit.com</a> - auditability / evidence packs.</li>
+          <li><a href="https://www.payrisk.ai/" target="_blank" rel="noopener">PayRisk.ai</a> - risk transfer language (without product claims).</li>
+          <li><a href="https://www.signedresponse.com/" target="_blank" rel="noopener">SignedResponse.com</a> - signed artifacts / integrity of evidence.</li>
+          <li><a href="https://www.computeintegrity.com/" target="_blank" rel="noopener">ComputeIntegrity.com</a> - integrity for compute and evidence trails.</li>
+        </ul>
+      </section>
+
+      <!-- ============ RELATED ASSETS FR ============ -->
+      <section class="card section" data-fr hidden>
+        <h2>Actifs de catégorie connexes (liens sobres)</h2>
+        <p class="small">Présents uniquement pour cohérence (pas un “annuaire de services”).</p>
+        <ul>
+          <li><a href="https://www.aiassurancecase.com/" target="_blank" rel="noopener">AIAssuranceCase.com</a> - concept ombrelle (assurance / safety case).</li>
+          <li><a href="https://www.aisystemicrisk.com/" target="_blank" rel="noopener">AISystemicRisk.com</a> - cadrage “pourquoi maintenant” (risque systémique).</li>
+          <li><a href="https://www.syntheticaudit.com/" target="_blank" rel="noopener">SyntheticAudit.com</a> - auditabilité / preuves.</li>
+          <li><a href="https://www.payrisk.ai/" target="_blank" rel="noopener">PayRisk.ai</a> - langage du transfert de risque (sans promesse produit).</li>
+          <li><a href="https://www.signedresponse.com/" target="_blank" rel="noopener">SignedResponse.com</a> - artefacts signés / intégrité des preuves.</li>
+          <li><a href="https://www.computeintegrity.com/" target="_blank" rel="noopener">ComputeIntegrity.com</a> - intégrité du calcul et traçabilité.</li>
+        </ul>
+      </section>
+
+      <!-- ============ CONTACT EN/FR ============ -->
+      <section class="card section" data-en>
+        <h2>Acquisition inquiries</h2>
+        <p>
+          Email: <b>contact@controlsafetycase.com</b><br/>
+          Please include your role, buyer entity, and intended use. NDA available on request.
+        </p>
+        <p class="small">
+          Legal positioning: independent informational resource, vendor-neutral, non-regulatory, non-certification, no legal advice.
+        </p>
+      </section>
+
+      <section class="card section" data-fr hidden>
+        <h2>Contact acquisition</h2>
+        <p>
+          Email : <b>contact@controlsafetycase.com</b><br/>
+          Merci d’indiquer votre rôle, l’entité acheteuse et l’usage visé. NDA disponible sur demande.
+        </p>
+        <p class="small">
+          Positionnement juridique : ressource informationnelle indépendante, neutre, non régulatoire, non certification, sans conseil juridique.
+        </p>
+      </section>
+
+      <div class="footer">
+        © <span id="y"></span> ControlSafetyCase.com. Independent informational website. No affiliation claimed.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const btnFR = document.getElementById('btn-fr');
+    const btnEN = document.getElementById('btn-en');
+    const enBlocks = document.querySelectorAll('[data-en]');
+    const frBlocks = document.querySelectorAll('[data-fr]');
+
+    function show(lang){
+      const isFR = lang === 'fr';
+      enBlocks.forEach(el => el.hidden = isFR);
+      frBlocks.forEach(el => el.hidden = !isFR);
+      btnFR.setAttribute('aria-pressed', isFR ? 'true' : 'false');
+      btnEN.setAttribute('aria-pressed', isFR ? 'false' : 'true');
+      document.documentElement.lang = isFR ? 'fr' : 'en';
+    }
+
+    btnFR.addEventListener('click', () => show('fr'));
+    btnEN.addEventListener('click', () => show('en'));
+
+    // EN by default
+    show('en');
+
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
