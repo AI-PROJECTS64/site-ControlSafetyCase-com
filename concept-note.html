@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ControlSafetyCase.com | Concept Note</title>
+  <meta name="description" content="Concept Note (EN/FR): Control Safety Case as an evidence-backed, structured argument about keeping advanced AI systems under control in a specified deployment context." />
+  <meta name="robots" content="index,follow" />
+
+  <link rel="canonical" href="https://www.controlsafetycase.com/concept-note.html" />
+  <link rel="alternate" href="https://www.controlsafetycase.com/concept-note.html" hreflang="en" />
+  <link rel="alternate" href="https://www.controlsafetycase.com/concept-note.html" hreflang="fr" />
+  <link rel="alternate" href="https://www.controlsafetycase.com/concept-note.html" hreflang="x-default" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="ControlSafetyCase.com | Concept Note" />
+  <meta property="og:description" content="Concept Note (EN/FR): Control Safety Case as an evidence-backed, structured argument about keeping advanced AI systems under control in a specified deployment context." />
+  <meta property="og:url" content="https://www.controlsafetycase.com/concept-note.html" />
+  <meta property="og:image" content="https://www.controlsafetycase.com/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preload" as="image" href="/logo-controlsafetycase.png" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <style>
+    :root{
+      --bg:#08111f;
+      --card:#0b1930;
+      --text:#e8eefc;
+      --muted:#b6c5e7;
+      --muted2:#93a8d4;
+      --line:#1f3560;
+      --accent:#6aa7ff;
+      --accent2:#7dd3fc;
+      --warn:#ffd18b;
+      --radius:16px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --max: 1040px;
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(106,167,255,.28), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(125,211,252,.18), transparent 55%),
+                  radial-gradient(900px 700px at 50% 110%, rgba(124,231,193,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{padding:28px 18px 70px}
+    .container{max-width:var(--max);margin:0 auto}
+    .topbar{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:14px;flex-wrap:wrap;
+      margin:0 auto 18px;max-width:var(--max);
+    }
+    .badge-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .badge{
+      font-size:12px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      padding:7px 10px;
+      border-radius:999px;
+      background: rgba(106,167,255,.16);
+      border:1px solid rgba(106,167,255,.22);
+      color:var(--text);
+    }
+    .badge.subtle{
+      background: rgba(147,168,212,.10);
+      border-color: rgba(147,168,212,.18);
+      color:var(--muted);
+    }
+    .lang{
+      display:flex;align-items:center;gap:8px;
+      background: rgba(11,25,48,.55);
+      border: 1px solid rgba(31,53,96,.55);
+      border-radius:999px;
+      padding:6px;
+      box-shadow: var(--shadow);
+    }
+    .lang button{
+      cursor:pointer;
+      border:0;
+      background: transparent;
+      color: var(--muted);
+      padding:8px 12px;
+      border-radius:999px;
+      font-weight:700;
+      letter-spacing:.02em;
+    }
+    .lang button[aria-pressed="true"]{
+      background: rgba(106,167,255,.22);
+      color: var(--text);
+      border:1px solid rgba(106,167,255,.25);
+    }
+
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)) , var(--card);
+      border: 1px solid rgba(31,53,96,.65);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .hero{
+      padding:24px 20px 18px;
+      text-align:center;
+    }
+    h1{
+      margin:0 0 10px;
+      font-size:30px;
+      letter-spacing:-.02em;
+    }
+    .logo{
+      width:108px;height:108px;
+      border-radius:16px;
+      border:1px solid rgba(31,53,96,.6);
+      background: rgba(10,22,42,.6);
+      display:block;
+      margin:12px auto 12px;
+      object-fit:contain;
+      box-shadow: 0 16px 30px rgba(0,0,0,.35);
+    }
+    .muted{color:var(--muted);max-width:920px;margin:0 auto}
+    .muted b{color:var(--text)}
+    .buttons{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+    .btn{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:11px 14px;
+      border-radius:12px;
+      font-weight:750;
+      border:1px solid rgba(31,53,96,.75);
+      background: rgba(10,22,42,.55);
+      color: var(--text);
+    }
+    .btn.primary{
+      background: rgba(106,167,255,.18);
+      border-color: rgba(106,167,255,.30);
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .notice{
+      margin:14px auto 0;
+      max-width:960px;
+      padding:12px 14px;
+      border-radius:14px;
+      background: rgba(255,209,139,.10);
+      border: 1px solid rgba(255,209,139,.18);
+      color: var(--muted);
+      text-align:left;
+    }
+    .notice b{color:var(--text)}
+    .section{
+      padding:18px 18px 16px;
+      margin-top:16px;
+    }
+    .section h2{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:-.01em;
+    }
+    .section p{margin:10px 0;color:var(--muted)}
+    ul{margin:10px 0 0;padding-left:18px;color:var(--muted)}
+    li{margin:6px 0}
+    .toc a{
+      text-decoration: underline;
+      text-decoration-color: rgba(106,167,255,.35);
+      text-underline-offset: 3px;
+    }
+    .small{font-size:13px;color:var(--muted2)}
+    .ref a{
+      text-decoration: underline;
+      text-decoration-color: rgba(106,167,255,.35);
+      text-underline-offset: 3px;
+    }
+    .footer{
+      margin-top:18px;
+      padding:16px 18px;
+      color: var(--muted2);
+      font-size: 13px;
+      text-align:center;
+      opacity:.95;
+    }
+    [hidden]{display:none !important;}
+    code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.95em;
+      color: var(--text);
+      background: rgba(10,22,42,.55);
+      border: 1px solid rgba(31,53,96,.55);
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="badge-row">
+        <span class="badge">CONCEPT NOTE</span>
+        <span class="badge subtle">Independent</span>
+        <span class="badge subtle">Not affiliated</span>
+      </div>
+      <div class="lang" aria-label="Language selector">
+        <button id="btn-fr" aria-pressed="false">FR</button>
+        <button id="btn-en" aria-pressed="true">EN</button>
+      </div>
+    </div>
+
+    <!-- ============ HERO EN ============ -->
+    <section class="card hero" data-en>
+      <h1>Control Safety Case - Concept Note</h1>
+      <img class="logo" src="/logo-controlsafetycase.png" alt="ControlSafetyCase.com" loading="eager" />
+      <p class="muted">
+        This note defines the concept conservatively: a Control Safety Case is an <b>evidence-backed, structured argument</b>
+        about whether an AI system can remain <b>under control</b> in a specified <b>deployment context</b>,
+        including explicit assumptions, control measures, evaluations, limits, and update commitments.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="/index.html">Home</a>
+        <a class="btn" href="/Acquisition%20Brief%20controlsafetycase-EN-202511.pdf" target="_blank" rel="noopener">Brief (EN)</a>
+        <a class="btn" href="/Acquisition%20Brief%20controlsafetycase-202511.pdf" target="_blank" rel="noopener">Brief (FR)</a>
+        <a class="btn primary" href="mailto:contact@controlsafetycase.com?subject=ControlSafetyCase.com%20-%20Concept%20Note%20-%20Offer%20/%20NDA%20request">Offer / NDA</a>
+      </div>
+      <div class="notice">
+        <b>Legal posture.</b> Independent informational resource only. Not a certification body, not a regulator, no audit or assurance service,
+        no legal advice. References are provided for context and do not imply affiliation or endorsement.
+      </div>
+    </section>
+
+    <!-- ============ HERO FR ============ -->
+    <section class="card hero" data-fr hidden>
+      <h1>Control Safety Case - Concept Note</h1>
+      <img class="logo" src="/logo-controlsafetycase.png" alt="ControlSafetyCase.com" loading="eager" />
+      <p class="muted">
+        Cette note fixe une définition conservatrice : un Control Safety Case est une <b>argumentation structurée fondée sur des preuves</b>
+        visant à établir si un système d’IA peut rester <b>sous contrôle</b> dans un <b>contexte de déploiement</b> donné,
+        avec hypothèses, mesures de contrôle, évaluations, limites et engagements de mise à jour explicites.
+      </p>
+      <div class="buttons">
+        <a class="btn" href="/index.html">Accueil</a>
+        <a class="btn" href="/Acquisition%20Brief%20controlsafetycase-EN-202511.pdf" target="_blank" rel="noopener">Brief (EN)</a>
+        <a class="btn" href="/Acquisition%20Brief%20controlsafetycase-202511.pdf" target="_blank" rel="noopener">Brief (FR)</a>
+        <a class="btn primary" href="mailto:contact@controlsafetycase.com?subject=ControlSafetyCase.com%20-%20Concept%20Note%20-%20Offre%20/%20Demande%20de%20NDA">Offre / NDA</a>
+      </div>
+      <div class="notice">
+        <b>Posture juridique.</b> Ressource informationnelle indépendante uniquement. Ni organisme de certification, ni régulateur, sans audit ni assurance,
+        sans conseil juridique. Les références n’impliquent aucune affiliation ni validation.
+      </div>
+    </section>
+
+    <div class="container">
+
+      <!-- ============ TOC EN ============ -->
+      <section class="card section toc" data-en>
+        <h2>Table of contents</h2>
+        <ul>
+          <li><a href="#def-en">1. Definition and scope</a></li>
+          <li><a href="#structure-en">2. Minimal structure (claims / arguments / evidence)</a></li>
+          <li><a href="#evidence-en">3. Evidence taxonomy for control</a></li>
+          <li><a href="#lifecycle-en">4. Lifecycle: monitoring, incidents, revisions</a></li>
+          <li><a href="#adjacent-en">5. Adjacent terms and boundaries</a></li>
+          <li><a href="#procurement-en">6. Procurement-ready language (examples)</a></li>
+          <li><a href="#refs-en">7. Primary sources</a></li>
+        </ul>
+        <p class="small">This page is intentionally conservative: it documents the concept, not a program, registry, or certification.</p>
+      </section>
+
+      <!-- ============ TOC FR ============ -->
+      <section class="card section toc" data-fr hidden>
+        <h2>Sommaire</h2>
+        <ul>
+          <li><a href="#def-fr">1. Définition et périmètre</a></li>
+          <li><a href="#structure-fr">2. Structure minimale (revendications / arguments / preuves)</a></li>
+          <li><a href="#evidence-fr">3. Taxonomie des preuves</a></li>
+          <li><a href="#lifecycle-fr">4. Cycle de vie : monitoring, incidents, révisions</a></li>
+          <li><a href="#adjacent-fr">5. Termes voisins et frontières</a></li>
+          <li><a href="#procurement-fr">6. Langage procurement (exemples)</a></li>
+          <li><a href="#refs-fr">7. Sources primaires</a></li>
+        </ul>
+        <p class="small">Page volontairement conservatrice : documentation d’un concept, pas un programme, registre ou certification.</p>
+      </section>
+
+      <!-- ============ SECTION 1 EN ============ -->
+      <section class="card section" id="def-en" data-en>
+        <h2>1. Definition and scope</h2>
+        <p>
+          A Control Safety Case is a structured argument, supported by evidence, about whether an AI system can remain
+          under control in a given deployment context. It makes explicit: the threat model, assumptions, control measures,
+          control evaluations, residual risks, and a revision process.
+        </p>
+        <ul>
+          <li><b>What it is</b>: a reviewable document structure linking claims to evidence.</li>
+          <li><b>What it is not</b>: a badge, certification, regulatory approval, or compliance guarantee.</li>
+          <li><b>Why it matters</b>: it converts “control” from vague intent into auditable, testable assertions.</li>
+        </ul>
+      </section>
+
+      <!-- ============ SECTION 1 FR ============ -->
+      <section class="card section" id="def-fr" data-fr hidden>
+        <h2>1. Définition et périmètre</h2>
+        <p>
+          Un Control Safety Case est une argumentation structurée, étayée par des preuves, visant à déterminer si un système d’IA
+          peut rester sous contrôle dans un contexte de déploiement donné. Il explicite : modèle de menace, hypothèses, mesures,
+          évaluations, risques résiduels et processus de révision.
+        </p>
+        <ul>
+          <li><b>Ce que c’est</b> : une structure révisable reliant revendications et preuves.</li>
+          <li><b>Ce que ce n’est pas</b> : un badge, une certification, une approbation régulatoire ou une promesse de conformité.</li>
+          <li><b>Pourquoi c’est utile</b> : rendre le “contrôle” auditable au lieu d’une intention vague.</li>
+        </ul>
+      </section>
+
+      <!-- ============ SECTION 2 EN ============ -->
+      <section class="card section" id="structure-en" data-en>
+        <h2>2. Minimal structure (claims / arguments / evidence)</h2>
+        <p>
+          The core pattern is <code>Claim → Argument → Evidence</code>. A control safety case should be readable by a reviewer
+          who did not build the system, and should discourage cherry-picking by making assumptions and limits explicit.
+        </p>
+        <ul>
+          <li><b>Claims</b>: what must be true for safe deployment under control (e.g., “control measures cannot be subverted to cause unacceptable outcomes”).</li>
+          <li><b>Arguments</b>: why the claim holds in this deployment context (threat model, mechanisms, mitigations).</li>
+          <li><b>Evidence</b>: control evaluations, red team results, monitoring data, incident history, and signed artifacts.</li>
+        </ul>
+      </section>
+
+      <!-- ============ SECTION 2 FR ============ -->
+      <section class="card section" id="structure-fr" data-fr hidden>
+        <h2>2. Structure minimale (revendications / arguments / preuves)</h2>
+        <p>
+          Le schéma central est <code>Revendication → Argument → Preuve</code>. Un control safety case doit être lisible par un relecteur externe
+          et limiter le cherry-picking en rendant les hypothèses et limites explicites.
+        </p>
+        <ul>
+          <li><b>Revendications</b> : ce qui doit être vrai pour déployer sous contrôle (ex. “les mesures ne peuvent pas être subverties pour produire des issues inacceptables”).</li>
+          <li><b>Arguments</b> : pourquoi cela tient dans ce contexte (menaces, mécanismes, mitigations).</li>
+          <li><b>Preuves</b> : évaluations, red teaming, monitoring, historique d’incidents, artefacts signés.</li>
+        </ul>
+      </section>
+
+      <!-- ============ SECTION 3 EN ============ -->
+      <section class="card section" id="evidence-en" data-en>
+        <h2>3. Evidence taxonomy for control</h2>
+        <p>
+          Evidence should be tied to the deployment context and threat model. Typical evidence classes:
+        </p>
+        <ul>
+          <li><b>Control evaluations</b>: test whether control measures hold against realistic adversarial behavior.</li>
+          <li><b>Red teaming</b>: structured adversarial attempts to bypass or subvert controls.</li>
+          <li><b>Monitoring and alerts</b>: ongoing measurements, anomaly detection, human escalation gates.</li>
+          <li><b>Integrity of evidence</b>: signed logs, hashes, reproducible runs, provenance of results.</li>
+          <li><b>Change management</b>: versioning, patch notes, and reassessment triggers.</li>
+        </ul>
+      </section>
+
+      <!-- ============ SECTION 3 FR ============ -->
+      <section class="card section" id="evidence-fr" data-fr hidden>
+        <h2>3. Taxonomie des preuves</h2>
+        <p>
+          Les preuves doivent être liées au contexte de déploiement et au modèle de menace. Classes courantes :
+        </p>
+        <ul>
+          <li><b>Évaluations de contrôle</b> : tester si les mesures tiennent face à des comportements adversariaux réalistes.</li>
+          <li><b>Red teaming</b> : tentatives structurées de contournement/subversion.</li>
+          <li><b>Monitoring et alertes</b> : mesures continues, détection d’anomalies, escalade humaine.</li>
+          <li><b>Intégrité des preuves</b> : logs signés, hashes, runs reproductibles, provenance des résultats.</li>
+          <li><b>Change management</b> : versioning, notes de version, déclencheurs de réévaluation.</li>
+        </ul>
+      </section>
+
+      <!-- ============ SECTION 4 EN ============ -->
+      <section class="card section" id="lifecycle-en" data-en>
+        <h2>4. Lifecycle: monitoring, incidents, revisions</h2>
+        <p>
+          A control safety case should be treated as a living artifact: updated when the system, environment, or threat model changes.
+          It should define revision triggers and an incident pathway.
+        </p>
+        <ul>
+          <li><b>Revision triggers</b>: model updates, new tools/capabilities, new attack classes, policy changes, incidents.</li>
+          <li><b>Incident handling</b>: triage, containment, root-cause analysis, evidence preservation, and corrective actions.</li>
+          <li><b>Review cadence</b>: periodic review even without incidents, with explicit sign-off or governance review steps.</li>
+        </ul>
+      </section>
+
+      <!-- ============ SECTION 4 FR ============ -->
+      <section class="card section" id="lifecycle-fr" data-fr hidden>
+        <h2>4. Cycle de vie : monitoring, incidents, révisions</h2>
+        <p>
+          Un control safety case doit être un artefact vivant : mis à jour lorsque le système, l’environnement ou les menaces évoluent.
+          Il définit des déclencheurs de révision et une voie de gestion d’incident.
+        </p>
+        <ul>
+          <li><b>Déclencheurs</b> : updates modèle, nouveaux outils/capacités, nouvelles attaques, changements de politiques, incidents.</li>
+          <li><b>Incidents</b> : triage, containment, analyse cause racine, préservation des preuves, actions correctives.</li>
+          <li><b>Cadence</b> : revues périodiques avec étapes d’approbation/gouvernance explicites.</li>
+        </ul>
+      </section>
+
+      <!-- ============ SECTION 5 EN ============ -->
+      <section class="card section" id="adjacent-en" data-en>
+        <h2>5. Adjacent terms and boundaries</h2>
+        <p>
+          The term “control safety case” sits next to related concepts. This site uses these terms descriptively:
+        </p>
+        <ul>
+          <li><b>Control measures</b> vs <b>control evaluations</b>: controls are the measures; evaluations are evidence they hold.</li>
+          <li><b>Inability arguments</b>: a related evidence style; often discussed as safety-case templates.</li>
+          <li><b>Safety cases</b>: legacy pattern in safety-critical engineering; here adapted to AI control contexts.</li>
+        </ul>
+        <p class="small">
+          Boundary rule: this site does not maintain any “approved list”, “registry”, or “certification” marks.
+        </p>
+      </section>
+
+      <!-- ============ SECTION 5 FR ============ -->
+      <section class="card section" id="adjacent-fr" data-fr hidden>
+        <h2>5. Termes voisins et frontières</h2>
+        <p>
+          “Control safety case” se situe à côté de notions connexes. Ici, ces termes sont utilisés à titre descriptif :
+        </p>
+        <ul>
+          <li><b>Control measures</b> vs <b>control evaluations</b> : mesures vs preuves qu’elles tiennent.</li>
+          <li><b>Inability arguments</b> : style de preuve voisin, parfois présenté comme templates de safety case.</li>
+          <li><b>Safety cases</b> : héritage safety-critical, ici adapté au contrôle des systèmes d’IA.</li>
+        </ul>
+        <p class="small">
+          Règle de frontière : aucun “registre approuvé”, “liste validée” ou marque de “certification”.
+        </p>
+      </section>
+
+      <!-- ============ SECTION 6 EN ============ -->
+      <section class="card section" id="procurement-en" data-en>
+        <h2>6. Procurement-ready language (examples)</h2>
+        <p>
+          These examples are informational only (not legal advice). They illustrate the kind of clarity a control safety case can support:
+        </p>
+        <ul>
+          <li><b>Scope</b>: “The control safety case SHALL define deployment context, threat model, and operational assumptions.”</li>
+          <li><b>Evidence</b>: “The control safety case SHALL link each critical claim to control evaluations and monitoring evidence.”</li>
+          <li><b>Limits</b>: “The control safety case SHALL document limitations, residual risks, and out-of-scope behaviors.”</li>
+          <li><b>Updates</b>: “The control safety case SHALL define revision triggers and a review cadence.”</li>
+          <li><b>Integrity</b>: “Evidence artifacts SHOULD be signed or otherwise integrity-protected.”</li>
+        </ul>
+      </section>
+
+      <!-- ============ SECTION 6 FR ============ -->
+      <section class="card section" id="procurement-fr" data-fr hidden>
+        <h2>6. Langage procurement (exemples)</h2>
+        <p>
+          Exemples informationnels uniquement (sans conseil juridique). Ils illustrent la clarté qu’un control safety case peut apporter :
+        </p>
+        <ul>
+          <li><b>Périmètre</b> : “Le control safety case DOIT définir le contexte, le modèle de menace et les hypothèses opérationnelles.”</li>
+          <li><b>Preuves</b> : “Le control safety case DOIT relier chaque revendication critique à des évaluations et à des preuves de monitoring.”</li>
+          <li><b>Limites</b> : “Le control safety case DOIT documenter limites, risques résiduels et hors périmètre.”</li>
+          <li><b>Mises à jour</b> : “Le control safety case DOIT définir déclencheurs et cadence de révision.”</li>
+          <li><b>Intégrité</b> : “Les artefacts de preuve DEVRAIENT être signés ou protégés en intégrité.”</li>
+        </ul>
+      </section>
+
+      <!-- ============ REFERENCES EN ============ -->
+      <section class="card section ref" id="refs-en" data-en>
+        <h2>7. Primary sources (selection)</h2>
+        <ul>
+          <li><a href="https://www.aisi.gov.uk/research/a-sketch-of-an-ai-control-safety-case" target="_blank" rel="noopener">A sketch of an AI control safety case (AISI)</a></li>
+          <li><a href="https://www.aisi.gov.uk/blog/how-to-evaluate-control-measures-for-ai-agents" target="_blank" rel="noopener">How to evaluate control measures for AI agents? (AISI)</a></li>
+          <li><a href="https://www.aisi.gov.uk/blog/safety-cases-at-aisi" target="_blank" rel="noopener">Safety cases at AISI (AISI)</a></li>
+          <li><a href="https://www.aisi.gov.uk/blog/safety-case-template-for-inability-arguments" target="_blank" rel="noopener">Safety case template for “inability” arguments (AISI)</a></li>
+          <li><a href="https://blog.redwoodresearch.org/p/takeaways-from-sketching-a-control" target="_blank" rel="noopener">Takeaways from sketching a control safety case (Redwood Research)</a></li>
+          <li><a href="https://arxiv.org/abs/2504.05259" target="_blank" rel="noopener">How to evaluate control measures for LLM agents? (arXiv)</a></li>
+        </ul>
+        <p class="small">
+          References are provided to document public usage of the concept and related evaluation methods. No affiliation is implied.
+        </p>
+      </section>
+
+      <!-- ============ REFERENCES FR ============ -->
+      <section class="card section ref" id="refs-fr" data-fr hidden>
+        <h2>7. Sources primaires (sélection)</h2>
+        <ul>
+          <li><a href="https://www.aisi.gov.uk/research/a-sketch-of-an-ai-control-safety-case" target="_blank" rel="noopener">A sketch of an AI control safety case (AISI)</a></li>
+          <li><a href="https://www.aisi.gov.uk/blog/how-to-evaluate-control-measures-for-ai-agents" target="_blank" rel="noopener">How to evaluate control measures for AI agents? (AISI)</a></li>
+          <li><a href="https://www.aisi.gov.uk/blog/safety-cases-at-aisi" target="_blank" rel="noopener">Safety cases at AISI (AISI)</a></li>
+          <li><a href="https://www.aisi.gov.uk/blog/safety-case-template-for-inability-arguments" target="_blank" rel="noopener">Safety case template for “inability” arguments (AISI)</a></li>
+          <li><a href="https://blog.redwoodresearch.org/p/takeaways-from-sketching-a-control" target="_blank" rel="noopener">Takeaways from sketching a control safety case (Redwood Research)</a></li>
+          <li><a href="https://arxiv.org/abs/2504.05259" target="_blank" rel="noopener">How to evaluate control measures for LLM agents? (arXiv)</a></li>
+        </ul>
+        <p class="small">
+          Les références servent à documenter l’usage public du concept et des méthodes d’évaluation associées. Aucune affiliation n’est impliquée.
+        </p>
+      </section>
+
+      <div class="footer">
+        © <span id="y"></span> ControlSafetyCase.com. Independent informational website. No affiliation claimed.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const btnFR = document.getElementById('btn-fr');
+    const btnEN = document.getElementById('btn-en');
+    const enBlocks = document.querySelectorAll('[data-en]');
+    const frBlocks = document.querySelectorAll('[data-fr]');
+
+    function show(lang){
+      const isFR = lang === 'fr';
+      enBlocks.forEach(el => el.hidden = isFR);
+      frBlocks.forEach(el => el.hidden = !isFR);
+      btnFR.setAttribute('aria-pressed', isFR ? 'true' : 'false');
+      btnEN.setAttribute('aria-pressed', isFR ? 'false' : 'true');
+      document.documentElement.lang = isFR ? 'fr' : 'en';
+    }
+
+    btnFR.addEventListener('click', () => show('fr'));
+    btnEN.addEventListener('click', () => show('en'));
+
+    // EN by default
+    show('en');
+
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
